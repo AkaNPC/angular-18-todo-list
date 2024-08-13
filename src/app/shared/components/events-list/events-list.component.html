@@ -1,0 +1,14 @@
+<main class="events">
+    <div class="events__events-btn-group">
+        <button class="medium-btn"
+            (click)="todoService.toggleFormVisible(); todoService.setCurrentPageName(todoService.pagesList[2])">Добавить
+            событие</button>
+        <div class="events__events-list">
+            <li *ngFor="let event of todoService.events; index as i">
+                {{event.text}} - {{event.endDate}}, {{event.endTime}}
+                <button class="small-btn" (click)="todoService.deleteEvent(i)">Удалить</button>
+            </li>
+        </div>
+    </div>
+    <app-form></app-form>
+</main>

@@ -1,0 +1,17 @@
+h1 {
+    font-size: 2rem;
+    margin: 10px;
+    color: rgb(222, 255, 255);
+    font-weight: 600;
+    text-shadow: rgb(31, 57, 50) 1px 0 10px;
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 80vw;
+    height: 70vh;
+    margin: auto;
+    box-shadow: 10px 5px 5px rgb(31, 57, 50);
+}

@@ -96,6 +96,7 @@
               }
             ],
             "styles": [
+              "src/reset.scss",
               "src/styles.scss"
             ],
             "scripts": []

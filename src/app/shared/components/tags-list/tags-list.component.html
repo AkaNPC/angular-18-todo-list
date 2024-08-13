@@ -1,0 +1,13 @@
+<main class="tags">
+    <div class="tags__list-btn-group">
+        <button class="medium-btn" (click)="todoService.toggleFormVisible()">Добавить
+            тег</button>
+        <div class="tags__list">
+            <li *ngFor="let tag of todoService.tags; index as i" (click)="todoService.markTag(tag)">
+                <p [ngClass]="{'selectedTag': todoService.selectedTagName===tag}">{{tag}}</p>
+                <button class="small-btn" (click)="todoService.deleteTag(i); $event.stopPropagation()">Удалить</button>
+            </li>
+        </div>
+    </div>
+    <app-form></app-form>
+</main>

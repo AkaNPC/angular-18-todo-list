@@ -1,0 +1,1 @@
+export type Page = 'tasks' | 'tags' | 'events';

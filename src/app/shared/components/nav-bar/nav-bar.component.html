@@ -1,0 +1,10 @@
+<header>
+    <nav class="navbar">
+        <a [ngClass]="{'navbar__selectedMenu': todoService.currentPage==='tasks'}"
+            (click)="todoService.setCurrentPageName(todoService.pagesList[0])" routerLink="/tasks">Список Задач</a>
+        <a [ngClass]="{'navbar__selectedMenu': todoService.currentPage==='events'}"
+            (click)="todoService.setCurrentPageName(todoService.pagesList[2])" routerLink="/events">События</a>
+        <a [ngClass]="{'navbar__selectedMenu': todoService.currentPage==='tags'}"
+            (click)="todoService.setCurrentPageName(todoService.pagesList[1])" routerLink="/tags">Теги</a>
+    </nav>
+</header>

@@ -1,0 +1,25 @@
+<a href=""></a>
+<main class="tasks">
+    <div class="tasks__tasks-btn-group">
+        <div class="tasks__tasks-menu-btn">
+            <button class="medium-btn" (click)="todoService.clearTasks()">Очистить список</button>
+            <button class="medium-btn" *ngIf="todoService.isFormHidden"
+                (click)="todoService.toggleFormVisible(); todoService.setCurrentPageName(todoService.pagesList[0])">Добавить
+                задачу</button>
+        </div>
+        <div class="tasks__tasks-list">
+            <li class="tasks__tasks-item" *ngFor="let task of todoService.tasks; index as i">
+                <span [ngClass]="{'completedTask': task.isComplete}"
+                    (click)="todoService.attachTagToTask(i); todoService.completeTask(i)">{{task.name}}:
+                    {{task.description}} - {{task.date}} <p [ngClass]="{'task-tag-style': task.tag}">#{{task.tag}}
+                    </p></span>
+                <div class="tasks__tasks-list-btn-group">
+                    <button class="small-btn"
+                        (click)="todoService.editTask(task.id, task.name, task.description)">Редактировать</button>
+                    <button class="small-btn" (click)="todoService.deleteTask(task.id)">Удалить</button>
+                </div>
+            </li>
+        </div>
+    </div>
+    <app-form></app-form>
+</main>

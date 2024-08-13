@@ -1,0 +1,83 @@
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(0, 49, 49);
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    padding: 5px;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.form input {
+    margin: 0px;
+}
+
+.form span {
+    font-size: 1rem;
+    width: 100%;
+    height: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.form .form__task-input {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 20px;
+    width: 90%;
+    height: auto;
+}
+
+.form .form__task-input-date-time {
+    display: flex;
+    flex-direction: column;
+}
+
+.form .form__task-input-date-time button {
+    margin-bottom: 20px;
+}
+
+.form .form__task-input-date-time input {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.form .form__menu-buttons {
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+}
+
+.form .form__task-title {
+    width: 100%;
+}
+
+.form .form__task-description {
+    width: 100%;
+    height: 100%;
+}
+
+.form .form__validation-message {
+    color: rgb(179, 0, 0);
+}
+
+.form .form__date-time-inputs {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 20px;
+    width: 90%;
+    height: auto;
+}
+
+.form .form__date-time-inputs input {
+    font-size: 1rem;
+    text-align: center;
+}
