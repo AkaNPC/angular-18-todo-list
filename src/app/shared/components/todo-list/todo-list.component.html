@@ -15,7 +15,7 @@
                     </p></span>
                 <div class="tasks__tasks-list-btn-group">
                     <button class="small-btn"
-                        (click)="todoService.editTask(task.id, task.name, task.description)">Редактировать</button>
+                        (click)="todoService.editTask(task.id, task.name, task.description); todoService.toggleFormVisible()">Редактировать</button>
                     <button class="small-btn" (click)="todoService.deleteTask(task.id)">Удалить</button>
                 </div>
             </li>
